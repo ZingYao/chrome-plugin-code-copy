@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "CSDN 复制破解",
+  "version": "1.0",
+  "description": "CSDN 复制破解",
+  "permissions": [
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_security_policy": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "css": [
+        "src/layui/css/layui.css",
+        "content.css"
+      ],
+      "js": [
+        "content.js",
+        "src/layui/layui.js",
+        "src/clipboard/clipboard.min.js"
+      ]
+    }
+  ]
+}
