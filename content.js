@@ -13,15 +13,17 @@ window.addEventListener('load', () => {
       $(dom).hover(() => {
         $(dom).append(copyBtn);
         // 为复制按钮添加点击事件
-        $('.plugin-copy-btn').click((dom) => {
-          console.log('dom',$(dom))
-          const target = $(dom).parent()
+        $('.plugin-copy-btn').click(() => {
+          const target = $('.plugin-copy-btn').parent();
           target.focus();
           const range = document.createRange();
           const selection = window.getSelection();
           range.selectNodeContents(target[0]);
           selection.removeAllRanges();
           selection.addRange(range);
+          navigator.clipboard.writeText(range.toString());
+          selection.removeAllRanges();
+          layer.msg("复制成功");
         })
       }, () => {
         $('.plugin-copy-btn').remove();

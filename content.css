@@ -1,6 +1,6 @@
 .plugin-copy-btn {
     position: absolute;
     z-index: 100000;
-    top: 5px;
-    left: 20px;
+    top: 2px;
+    left: 50px;
 }
