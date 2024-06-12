@@ -11,6 +11,14 @@ window.addEventListener('load', () => {
     // 遍历code标签
     codeTags.each((_, dom) => {
       $(dom).hover(() => {
+        switch (window.location.hostname) {
+          case 'blog.csdn.net':
+            //csdn button 位置修正
+            const left = $('.pre-numbering').width() + 3
+            copyBtn.css({
+              'left': left + 'px'
+            })
+        }
         $(dom).append(copyBtn);
         // 为复制按钮添加点击事件
         $('.plugin-copy-btn').click(() => {
