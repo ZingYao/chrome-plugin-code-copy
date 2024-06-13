@@ -3,4 +3,8 @@
     z-index: 100000;
     top: 3px;
     left: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

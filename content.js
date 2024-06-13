@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   layui.use(() => {
     const layer = layui.layer;
     const $ = layui.$;
-    const copyBtn = $('<button class="layui-btn plugin-copy-btn">插件复制</button>')
+    const copyBtn = $('<input type="button" value="插件复制" class="layui-btn plugin-copy-btn" />')
 
     const codeTags = $('code')
 
